@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom scrollbar and glass utility styles */
+@layer utilities {
+  .glass-light {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(142, 68, 173, 0.08);
+  }
+
+  .glass-dark {
+    background: rgba(15, 15, 25, 0.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .neon-purple-glow {
+    box-shadow: 0 0 20px rgba(202, 114, 255, 0.4);
+  }
+
+  .yellow-accent-text {
+    color: #FFD84D;
+  }
+
+  .purple-accent-bg {
+    background-color: #CA72FF;
+  }
+
+  .liquid-mesh-light {
+    background-color: #f7f6f9;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(202, 114, 255, 0.15) 0px, transparent 60%),
+      radial-gradient(at 100% 100%, rgba(255, 216, 77, 0.1) 0px, transparent 60%);
+  }
+
+  .liquid-mesh-dark {
+    background-color: #0c0a10;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(202, 114, 255, 0.18) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(255, 216, 77, 0.07) 0px, transparent 50%);
+  }
+
+  /* Custom subtle neon glow */
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(202, 114, 255, 0.25);
+  }
+}
+
+/* Base resets */
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(202, 114, 255, 0.3) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(202, 114, 255, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(202, 114, 255, 0.45);
+}
+

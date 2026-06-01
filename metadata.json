@@ -1,0 +1,6 @@
+{
+  "name": "SnapNote",
+  "description": "An ultra-modern mobile-first task manager and note-taking app featuring liquid glass aesthetics, productivity metrics, and offline state persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
